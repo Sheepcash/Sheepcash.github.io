@@ -5,15 +5,12 @@
 body{
 	overflow: hidden;
 	position: relative;
+	width: 100%;
+	height: 100%;
 }
 nav{
 	width: 100%;
-	height: 50px;
-	-background: red;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 99;
+	height: 80px;
 	position: relative;
 }
 nav .nav{
@@ -59,12 +56,15 @@ nav .nav{
 	top: 0;
 	left: 0;
 	-overflow: hidden;
-	width:100%
+	width:100%;
+	height: 400%;
 }
 .totPage li{
 	background-size: cover;
 	width:100%;
+	height: 25%;
 	position: relative;
+	background-size: cover !important;
 }
 /**********************************page1***************************************************/
 .totPage_1{
@@ -77,16 +77,20 @@ nav .nav{
 	width: 100%;
 	height:100px ;
 	line-height: 100px;
-	position: absolute;
-	top: 100px;
 	text-align: center;
 	letter-spacing: 10px;
 }
-.totPage_1>input{
+.middle{
+	width: 100%;
+	height: ;
+	position: relative;
+	margin-top: 20px;
+}
+.middle>input{
 	width: 400px;
 	height: 50px;
 	position: absolute;
-	top: 250px;
+	top: 20px;
 	left: 50%;
 	margin-left: -200px;
 	background: rgba(255,255,255,.1);
@@ -97,12 +101,12 @@ nav .nav{
 	color: #fff;
 	font-size: 16px;
 }
-.totPage_1>input:nth-of-type(2){
-	top: 320px;
+.middle>input:nth-of-type(2){
+	top:90px;
 }
-.totPage_1 .login{
+.middle .login{
 	position: absolute;
-	top: 385px;
+	top: 140px;
 	left: 50%;
 	width: 400px;
 	height: 50px;
@@ -110,27 +114,27 @@ nav .nav{
 	font-size: 14px;
 	color: #fff;
 }
-.totPage_1 .login input{
+.middle .login input{
 	width: 18px;
 	height: 18px;
 	position: absolute;
 	top: 17px;
 	left: 0;
 }
-.totPage_1 .login label{
+.middle .login label{
 	height: 50px;
 	cursor: pointer;
 	margin-left: 25px;
 	line-height: 50px;
 }
-.totPage_1 .login a{
+.middle .login a{
 	text-decoration: none;
 	color: #fff;
 	display: block;
 	float: right;
 	line-height: 50px;
 }
-.totPage_1 .login a:hover{
+.middle .login a:hover{
 	text-decoration: underline;
 }
 
@@ -138,7 +142,7 @@ nav .nav{
 	width: 400px;
 	height: 40px;
 	position: absolute;
-	top: 440px;
+	top: 190px;
 	left: 50%;
 	margin-left: -200px;
 	background: #00b4ff;
@@ -150,9 +154,10 @@ nav .nav{
 	border: 1px solid #00b4ff;
 	letter-spacing: 5px;
 	cursor: pointer;
+	transition: border 1s;
 }
 .totPage_1 button:hover{
-	transition: 1s;
+	-transition: 1s;
 	border: 1px solid #fff;
 }
 .totPage_1 button i{
@@ -172,7 +177,7 @@ nav .nav{
 	height: 90px;
 	-background: red;
 	position: absolute;
-	bottom:120px ;
+	bottom:100px ;
 }
 .totPage_1 .msg p{
 	width: 100%;
@@ -197,15 +202,15 @@ nav .nav{
 	from{bottom: 5%;opacity: 1;}
 	to{bottom: 8%;opacity: 0.3;}
 }
-.totPage_1>.test{
+.middle>.test{
 	width: 150px;
 	height: 125px;
 	position: absolute;
-	top: 250px;
-	left: 65%;
-	-background: red;
+	top: 20px;
+	left: 50%;
+	margin-left: 225px;
 }
-.totPage_1>.test>span{
+.middle>.test>span{
 	display: block;
 	-width: 150px;
 	height: 30px;
@@ -217,13 +222,13 @@ nav .nav{
 	left: 0;
 	color: red;
 }
-.totPage_1>.test>span:nth-of-type(1){
+.middle>.test>span:nth-of-type(1){
 	
 	top: 10px;
 	width: 125px;
 	display: none;
 }
-.totPage_1>.test>span:nth-of-type(1):before{
+.middle>.test>span:nth-of-type(1):before{
 	content: "";
 	width: 0;
 	height: 0;
@@ -233,12 +238,12 @@ nav .nav{
 	bottom: 6px;
 	left: -20px;
 }
-.totPage_1>.test>span:nth-of-type(2){
+.middle>.test>span:nth-of-type(2){
 	width: 150px;
 	top: 82px;
 	display: none;
 }
-.totPage_1>.test>span:nth-of-type(2):before{
+.middle>.test>span:nth-of-type(2):before{
 	content: "";
 	width: 0;
 	height: 0;
@@ -399,10 +404,11 @@ nav .nav{
 }
 .contant_nav{
 	width: 100%;
-	height: 63%;
+	height: 40%;
 	background: rgba(0,0,0,0.5);
 	float: left;
-	position: relative;
+	position: absolute;
+	bottom: 0;
 }
 .contant_nav .dividingline{
 	width: 5px;
@@ -423,7 +429,7 @@ nav .nav{
 	border-color: #fff transparent transparent transparent;
 	position: absolute;
 	top: 0;
-	left: -11.5px;
+	left: -12.25px;
 }
 .contant_nav .dividingline:after{
 	content: "";
@@ -433,7 +439,7 @@ nav .nav{
 	border-color:  transparent transparent #fff transparent;
 	position: absolute;
 	bottom: 0;
-	left: -11.5px;
+	left: -12.25px;
 }
 /****************************************page3**********************************************/
 .totPage_3{

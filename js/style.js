@@ -1,14 +1,14 @@
 
 	var totPage = document.querySelector('.totPage')
 	var pages = document.querySelectorAll('li[class*=totPage]')
-	var wsh = window.outerHeight; 
-	var wsw = window.outerWidth; 
-	//console.log(wsh,wsw)
+	var wsh = document.body.scrollHeight
+	var wsw = document.body.clientWidth
+	console.log(wsh,wsw)
 	$('body').css({height:wsh})
-	
-	$('li[class*=totPage]').each(function(i,ele){
-		$(ele).css({height:wsh})
-	})
+//	
+//	$('li[class*=totPage]').each(function(i,ele){
+//		$(ele).css({height:wsh})
+//	})
 	var onoff = true;
 	var num=0;
 	addWheel(document,fnup,fndown)
