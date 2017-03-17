@@ -1,8 +1,8 @@
 
 	var totPage = document.querySelector('.totPage')
 	var pages = document.querySelectorAll('li[class*=totPage]')
-	var wsh = document.body.scrollHeight
-	var wsw = document.body.clientWidth
+	var wsh = document.documentElement.clientHeight
+	var wsw = document.documentElement.clientWidth
 	console.log(wsh,wsw)
 	$('body').css({height:wsh})
 //	
@@ -172,8 +172,17 @@ $('.content_left').on('click',function(){
 			
 		}
 		$('.timeline')[nun+1].style.transform = 'translateX(0)';
-		add=nun
-		
+		add=nun;
+		if(nun==0){
+			$('.icon_prev').css('display','none')
+		}else{
+			$('.icon_prev').css('display','block')
+		}
+		if(nun==9){
+			$('.icon_next').css('display','none')
+		}else{
+			$('.icon_next').css('display','block')
+		}
 	}
 	setTimeout(function(){
 		addonoff = true;
@@ -195,15 +204,24 @@ $('.content_right').on('click',function(){
 		
 		$('.timeline')[nun].style.transform = 'translateX(-100%)';
 		add=nun
-		
+		if(nun==0){
+			$('.icon_prev').css('display','none')
+		}else{
+			$('.icon_prev').css('display','block')
+		}
+		if(nun==9){
+			$('.icon_next').css('display','none')
+		}else{
+			$('.icon_next').css('display','block')
+		}
 	}
 	
 	setTimeout(function(){
 		addonoff = true;
 	},1000)
 })
-
-
+var ph = $('.contant_nav').height();
+$('.contant_nav p').css('height',ph/6.5+'px')
 
 
 /*********************************************page3******************************************/
